@@ -1,6 +1,8 @@
 FROM docker:git
 
-RUN apk add --update python \
+RUN apk add --update \
+    python \
+    zip \
     && rm -rf /var/cache/apk/*
 
 RUN curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip \
